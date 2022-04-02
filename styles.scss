@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+
+:root {
+    //### Primary Colours###
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+
+    //### Neutral Colours ###
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+
+    // ### Text ###
+    --Font-size-quote: 28px;
+    --Weights: 800;
+
+}
+
+
+//Base Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Dark-Blue);
+    font-family: Manrope;
+}
+
+.container {
+    background: var(--Dark-Grayish-Blue);
+    padding: 1.5rem 1.5rem;
+    width: 21rem;
+    border-radius: .5rem;
+    position: relative;
+
+    .heading {
+        color: var(--Neon-Green);
+        text-transform: uppercase;
+        font-size: .6rem;
+        letter-spacing: .2rem;
+        text-align: center;
+        padding: .6rem;
+        font-weight: var(--Weights);
+    }
+
+    .quote {
+        color: var(--Light-Cyan);
+        font-size: var(--Font-size-quote);
+        text-align: center;
+        padding: 1rem 0;
+        font-weight: var(--Weights);
+    }
+
+    .divider {
+        padding-bottom: 1.5rem;
+    }
+
+    .dice-svg {
+        height: 3.2rem;
+        width:  3.2rem;
+        border-radius: 300%;
+        background: var(--Neon-Green);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        position: absolute;
+        left: 9rem;
+        bottom: -1.6rem;
+        img {
+            width: .6em;
+            height: .6em;
+            font-size: 2em;
+        }
+    }
+
+    .dice-svg:hover {
+        box-shadow: 0 0 50px var(--Neon-Green);
+        cursor: pointer;
+    }
+}
+
+
+
+@media screen and(min-width:400px) {
+    .container {
+        width: 30rem;
+
+        .divider img {
+            width: 27rem;
+            padding-bottom: .6rem;
+        }
+
+        .dice-svg {
+            left: 13.6rem;
+        }
+    }
+
+    
+}
